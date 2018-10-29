@@ -1,0 +1,300 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+nav{
+  position: relative;
+  background-color: rgba(250, 250, 250, 0.7);
+  width: 100%;
+  height: 100px;
+  clear: both;
+  overflow: hidden;
+  padding: 13px;
+}
+nav>a,
+nav>ul{
+  float: left;
+}
+nav>.mobile.menu{
+  float: right
+}
+main{
+  position: relative;
+}
+.hero{
+  background-image: url(../img/poster/stranger-things-poster.jpg);
+  height: 100vh;
+  background-position: center;
+  position: relative;
+}
+.hero-info{
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(250, 250, 250, 0.8);
+  width: 100%;
+}
+.hero-info>.hero-title{
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.hero-info>.hero-genre,
+.hero-info>.hero-season,
+.hero-info>.hero-caps{
+  width: calc(100% / 3);
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  float: left;
+}
+.hero-info>.hero-rating{
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  clear: both;
+}
+.hero-info>.hero-rating>strong{
+  color: #7C41C1;
+}
+.movies{
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 6px 6px 0px 0px;
+  padding: 7px;
+}
+.movie-card{
+  margin: 18px auto;
+  height: 102px;
+  width: 250px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16);
+  position: relative;
+  clear: both;
+  background-color: #F3F3F3;
+}
+.movie-card>.movie-poster{
+  height: 102px;
+  max-width: 67px;
+  object-fit: cover;
+  float: left;
+}
+.movie-card>div{
+  padding: 2px;
+  float: left;
+}
+.movie-card .movie-title{
+  font-size: 18px;
+  margin: 6px 2px;
+  padding-left: 4px;
+}
+.movie-card .movie-genre{
+  font-size: 16px;
+  margin: 2px;
+  padding-left: 4px;
+}
+.movie-card .movie-rating{
+  font-size: 16px;
+  margin: 2px;
+  padding-left: 4px;
+}
+.movie-rating>em{
+  font-weight: bolder;
+  font-style: normal;
+  color: #FFCC00;
+}
+.movie-card>.see-more{
+  position: absolute;
+  bottom: -6px;
+  right: -2px;
+}
+.movie-card>.see-more:hover{
+  bottom: -8px;
+  right: -4px;
+  filter: brightness(60%);
+
+}
+.more-movies{
+  width: 100%;
+  text-align: center;
+}
+footer{
+  width: 100%;
+  background-color: #C3C3C3;
+  height: 80px;
+  padding: 10px;
+  margin-top: 10px;
+}
+footer>.github{
+  float: right;
+}
+footer>.logo:hover>img,
+footer>.chats>li:hover,
+footer>.github:hover{
+  filter: brightness(60%);
+}
+@media screen and (max-width: 749px){
+  .mobile-hidden{
+    display: none;
+  }
+}
+@media screen and (min-width: 750px){
+  .tablet-hidden{
+    display: none;
+  }
+
+  nav>a,
+  nav>ul{
+    float: left;
+  }
+  nav>.dropmenu{
+    list-style: none;
+    width: 50%;
+  }
+  nav>.dropmenu>li{
+    float: right;
+    padding: 10px;
+  }
+  nav>.dropmenu>li>a,
+  nav>.perfilmenu>li>a{
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    transition: 1s;
+  }
+  nav>.dropmenu>li>a[selected]{
+    color: rgba(255, 204, 0, 1);
+  }
+  nav>.dropmenu>li>a:hover,
+  nav>.perfilmenu>li>a:hover{
+    color: rgba(255, 204, 0, 0.8);
+  }
+  nav>.perfilmenu{
+    list-style: none;
+    float: right;
+    height: 100%;
+  }
+  nav>.perfilmenu>li{
+    float: left;
+    padding: 0px 10px;
+  }
+
+  .hero-info{
+    width: 30%;
+    height: 100%;
+    padding-top: 100px;
+  }
+  .hero-info>.hero-title{
+    text-align: left;
+    width: calc( 100% - 30px);
+    padding-left: 30px;
+  }
+  .hero-info>.hero-genre,
+  .hero-info>.hero-season,
+  .hero-info>.hero-caps{
+    width: calc(100% - 30px);
+    text-align: left;
+    padding-left: 30px;
+    margin-top: 0px;
+  }
+  .hero-info>.hero-rating{
+    text-align: left;
+    padding-left: 30px;
+    clear: both;
+  }
+
+  .movies{
+    position: relative;
+    top: -67px;
+    width: 568px;
+    margin: 0 auto;
+    clear: both;
+    overflow: hidden;
+  }
+  .movie-card.main-card{
+    height: 212px;
+    width: 520px;
+    margin: 18px 16px;
+  }
+  .movie-card.main-card>.movie-poster{
+    height: 212px;
+    width: 139.13px;
+    max-width: 100%;
+  }
+  .movie-card.main-card>div{
+    padding: 10px;
+  }
+  .movie-card.main-card .movie-title{
+    font-size: 26px;
+    text-transform: uppercase;
+  }
+  .movie-card.main-card .movie-genre{
+    font-size: 20px;
+  }
+  .movie-card.main-card .movie-rating{
+    font-size: 20px;
+  }
+
+  .movie-card{
+    float: left;
+    height: 396px;
+    width: 260px;
+    margin-left: 7px;
+    margin-right: 7px;
+    clear: none;
+  }
+  .movie-card>.movie-poster{
+    height: 356px;
+    width: 260px;
+    max-width: 100%;
+    object-fit: cover;
+    float: left;
+  }
+  .movie-card>div{
+    padding: 2px;
+    float: left;
+  }
+  .movie-card .movie-title{
+    text-transform: uppercase
+  }
+  .movie-card .movie-genre{
+    display: none;
+  }
+  .movie-card .movie-rating{
+    display: none;
+  }
+
+  .more-movies{
+    clear: both;
+  }
+  footer>.logo{
+    float: left;
+    width: 20%;
+  }
+  footer>.chats{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    width: 50%;
+    overflow: hidden;
+  }
+  footer>.chats>li{
+    float: left;
+    margin: 10px 20px;
+  }
+  footer>.github{
+    padding: 10px;
+    width: 20%;
+  }
+}
