@@ -264,13 +264,13 @@ footer>.github:hover{
     padding: 2px;
     float: left;
   }
-  .movie-card .movie-title{
+  .movie-card:not(.main-card) .movie-title{
     text-transform: uppercase
   }
-  .movie-card .movie-genre{
+  .movie-card:not(.main-card) .movie-genre{
     display: none;
   }
-  .movie-card .movie-rating{
+  .movie-card:not(.main-card) .movie-rating{
     display: none;
   }
 
